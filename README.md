@@ -1,5 +1,5 @@
 # cutadapt
-Small, distroless-when-possible container for `cutadapt`.
+Small compatibility-focused container for `cutadapt`.
 
 ## how to use
 ```bash

@@ -1,4 +1,4 @@
-name: Build and Publish Distroless cutadapt
+name: Build and Publish cutadapt
 
 on:
   push:
