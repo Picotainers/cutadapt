@@ -14,5 +14,5 @@ docker run --rm docker.io/picotainers/cutadapt:latest cutadapt --help
 ## How to use
 
 ```bash
-docker run --rm -v "$(pwd):/data" docker.io/picotainers/cutadapt:latest --help
+docker run --rm -v "$(pwd):/data" docker.io/picotainers/cutadapt:latest cutadapt --help
 ```
