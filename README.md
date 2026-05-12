@@ -1,18 +1,22 @@
 # cutadapt
-Small compatibility-focused container for `cutadapt`.
+Source-built container image for `cutadapt`.
 
 ## Quick Usage
 
 ```bash
-# Pull the image
 docker pull docker.io/picotainers/cutadapt:latest
-
-# Run the tool
 docker run --rm docker.io/picotainers/cutadapt:latest cutadapt --help
 ```
 
-## How to use
+## Usage
 
 ```bash
-docker run --rm -v "$(pwd):/data" docker.io/picotainers/cutadapt:latest cutadapt --help
+# Mount the current directory so Cutadapt can read input FASTQ files and write output files
+docker run --rm -v "$(pwd):/data" -w /data docker.io/picotainers/cutadapt:latest cutadapt -a ADAPTER -o trimmed.fastq reads.fastq
+```
+
+## Building
+
+```bash
+docker build -t docker.io/picotainers/cutadapt:latest .
 ```
